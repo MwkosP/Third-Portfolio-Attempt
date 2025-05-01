@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Responsive Nav</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Ensure no scrollbars */
+        }
+
+        h1 {
+            
+            font-size: 70px;
+            z-index: 1;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        h2{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            color: #ffffff; font-size: 40px; 
+            text-align: center;
+          margin: 0;
+          
+            
+        }
+        h3{
+            margin-bottom: 150px;
+            font-weight: 700;
+            color: #ffffff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
+
+        /* Container that holds the nav bar */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Centers the nav horizontally */
+            padding: 15px 0;
+            gap: 1%;
+          
+        }
+
+        nav {
+            padding: 15px 0;
+            width: 40%; /* Make the nav take up full width */
+            max-width: 60%; /* Set a max-width for larger screens */
+            border: 0.1px solid rgba(249, 249, 249, 0.5); /* Light border */
+            border-radius: 30px;
+          
+            margin-top: 2%;
+            display: block;
+            background-color: #000000;
+            
+        }
+
+        /* The nav bar */
+        nav ul {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;
+            margin: 0 auto;
+            gap: 0%;
+            display: flex; /* Flexbox for horizontal items */
+            justify-content: space-around; /* Distribute items evenly */
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 18px;
+            padding: 10px 10px;
+            border: 2px solid #ffffff;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #555; /* Hover effect */
+        }
+
+        #navBarLetters {
+            font-size: 13px;
+        }
+        #toggleTheme{
+            width: 80px;
+            border: 0.1px solid rgba(249, 249, 249, 0.5); /* Light border */
+            border-radius: 30px;
+            
+            background-color: #000000; 
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            
+        }
+
+        /* Home page content */
+        .containerHomePage {
+    display: grid;
+    
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 25vh; /* Adjust this value */
+    color: blueviolet;
+    gap: 0px; /* Space between items */
+}
+
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #000; /* Black background to mimic night sky */
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Make sure it is behind other content */
+        }
+
+        .shooting-star {
+    position: absolute;
+    width: 5px; /* Width of the star */
+    height: 80px; /* Length of the star tail */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* More vibrant white gradient */
+    opacity: 1; /* Set opacity to full */
+    transform: rotate(45deg);
+    animation: shoot 1s ease-out infinite; /* Smooth animation */
+            border-radius: 50%; /* Rounded glow */
+}
+
+
+@keyframes shoot {
+    0% {
+        opacity: 0.5; /* Full opacity at start */
+        transform: translate(0, 0) rotate(45deg); /* Start position */
+    }
+    100% {
+        opacity: 0.5; /* Fade out by the end */
+        transform: translate(-300px, 300px) rotate(45deg); /* Move diagonally to bottom left */
+    }
+}
+@keyframes moveSpaceship {
+    0% {
+    left: -100;
+  }
+  100% {
+    left: 100vw;
+  } 
+}
+.spaceship {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  /*for animation check JS*/
+}
+
+
+        .styled-button {
+           
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            padding: 10px 20px; /* Space around the text */
+            font-size: 16px; /* Font size */
+            border: 0.1px solid rgba(249, 249, 249, 0.223); /* Light border */
+            border-radius: 20px; /* Rounded edges */
+            position: relative; /* For the glow effect */
+            cursor: pointer; /* Change cursor on hover */
+            text-align: center; /* Center text */
+            font-family: Arial, sans-serif; /* Font style */
+            transition: all 0.3s ease; /* Smooth transition */
+            outline: none;
+        }
+
+        /* Bottom glow effect */
+        .styled-button::after {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(138, 43, 226, 0) 0%, rgba(138, 43, 226, 0.8) 50%, rgba(138, 43, 226, 0) 100%);
+            bottom: -3px; /* Position slightly below the button */
+            left: 10%;
+            border-radius: 50%; /* Rounded glow */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect */
+        .styled-button:hover {
+            color: #fff; /* Keep the text white */
+            background-color: #111; /* Darker background on hover */
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.6); /* Glow around the button */
+        }
+
+        /* Expand the glow on hover */
+        .styled-button:hover::after {
+            width: 100%; /* Make the glow line wider */
+            background: linear-gradient(90deg, rgba(138, 43, 226, 0) 0%, rgba(138, 43, 226, 1) 50%, rgba(138, 43, 226, 0) 100%);
+        }
+        .dot {
+            opacity: 0;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(128, 128, 128, 0);
+  border-radius: 50%;
+  position: absolute;
+  top: 23%; /* Center the dot vertically */
+  left: 0%; /* Start from the left */
+  background-image: url('spaceship.png'); /* Update the path to the image */
+  background-size: cover; /* Make sure the spaceship covers the dot size */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+
+@keyframes moveDot {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;/*or vw instead*/
+  }
+}
+@keyframes moveUpDown {
+            0%, 100% {
+                transform: translateY(0 );
+            }
+            25% {
+                transform: translateY(100px); /* Move down */
+            }
+            75% {
+                transform: translateY(-100px); /* Move down */
+            }
+        }
+        @keyframes fadeOut {
+    
+    0% {
+        opacity: 0; /* Fully invisible at the beginning */
+    }
+    
+}
+#themeBtn{
+    background-color: #000000;
+    border:1px solid #ffffff;
+    width: 70px;
+    height: 30px;
+    margin-top: 2.3%;
+    border-radius: 30px;
+    position: relative;
+    color: #fff;
+}
+.aboutContainer{
+   
+    height: 30%;
+}
+
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="dot"></div>
+
+    <header >
+        
+        <nav>
+            <div>
+                <ul>
+                    <li><a class="styled-button" href="" id="navBarLetters">Home</a></li>
+                    <li><a class="styled-button" href="" id="navBarLetters">About</a></li>
+                    <li><a class="styled-button" href="" id="navBarLetters">Skills</a></li>
+                    <li><a class="styled-button" href="" id="navBarLetters">Projects</a></li>
+                    <li><a class="styled-button" href="" id="navBarLetters">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <button id="themeBtn" class="fas fa-moon"></button>
+        <div>
+            <!--<button id="toggleTheme">okay</button>-->
+        </div>
+    </header>
+
+    <section>
+        <div  class="containerHomePage" >
+            
+            <h2 >Hey there, I'm</h2>
+            <div style="display: flex;">
+                <h1><b>&lt; Username /&gt;</b></h1>
+                <h4>Person f5Card here</h4>
+            </div>
+            
+            <h3 >Java Developer | Web Developer</h3>
+            
+        </div>
+        
+    </section>
+
+
+    <section class="aboutContainer" >
+       
+        <h3 style="font-size: 30px;">About Me</h3>
+        <h4>Blabladfdsfsdfds</h4>
+        <h4>Bla bla ...</h4>
+    </section>
+    <section ></section>
+
+    <script>
+        // Initialize Particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 40, // Adjust the number of stars
+                    "density": {
+                        "enable": true,
+                        "value_area": 800 // Adjust density area
+                    }
+                },
+                "color": {
+                    "value": "#ffffff" // Star color
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.6,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 0.8, // Speed of the twinkling effect
+                        "opacity_min": 0.3, // Minimum brightness
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1, // Adjust this value to control the speed of the size change
+                "size_min": 0.1, // Minimum size of the particle when animating
+                "sync": false // If true, all particles will change size together
+                    }
+                },
+                "line_linked": {
+                    "enable": false // Disable connections between stars
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 0.04, // Adjust speed for subtle movement
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false // Disable interaction
+                    },
+                    "onclick": {
+                        "enable": false
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+
+        // JavaScript to create shooting stars
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.classList.add('shooting-star');
+
+            // Randomize the starting position
+            star.style.top = `${Math.random() * 80}vh`; // Random height
+            star.style.left = `${Math.random() * 100}vw`; // Random width
+
+            document.body.appendChild(star);
+
+            // Remove the star after animation completes
+            setTimeout(() => {
+                star.remove();
+            }, 1500); // Match the duration of the animation
+        }
+
+        // Generate shooting stars at intervals
+        setInterval(createShootingStar, 4000); // Every 4 seconds
+
+
+
+        //JS FOR SPACESHIP 
+        
+        //DISAPPEAR EVERY X SECS.
+        const dot = document.querySelector('.dot');
+
+function animateDot() {
+    dot.style.opacity = '1'; // Make the dot visible
+    dot.style.animation = 'moveDot 4s linear infinite , moveUpDown 4s ease-in-out infinite'; // Start the animation
+
+    setTimeout(() => {
+        dot.style.opacity = '0'; // Fade out the dot
+       dot.style.animation = ''; // Reset animation to stop it
+    }, 4000); // Wait for the moveDot animation to finish before fading out
+}
+
+// Repeat the animation every X seconds (4 seconds visible +   X-4 seconds invisible)
+setInterval(animateDot, 8000);
+
+
+
+//ALWAYS MOVE BASED ON H1 ELEMENT-NAME
+/*
+function positionSpaceship() {
+            const spaceship = document.querySelector('.spaceship');
+            const targetElement = document.querySelector('h1');
+
+            // Get the target element's position
+            const targetRect = targetElement.getBoundingClientRect();
+
+            // Position the spaceship based on the Y position of the <h1>
+            const spaceshipY = targetRect.top + (targetRect.height / 2) - (spaceship.offsetHeight / 2); // Center the spaceship vertically
+
+            // Update the spaceship's position
+            spaceship.style.top = `${spaceshipY}px`;
+        }
+
+        // Call the function to position the spaceship on page load
+        window.onload = positionSpaceship;
+
+        // Optionally, also position the spaceship when the window is resized
+        window.onresize = positionSpaceship;
+        */
+
+    </script>
+</body>
+</html>
