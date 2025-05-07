@@ -26,7 +26,7 @@ Welcome to my third portfolio attempt! This project showcases my progress in web
 
 ## 🧪 How to Run
 
-Just open the `index.html` file in your browser.  
+Just open the `index.html` file in your browser(To run locally).  
 Make sure `spaceship.png` is in the correct path for the spaceship to display properly.
 
 ---
