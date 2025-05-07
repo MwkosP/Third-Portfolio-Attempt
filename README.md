@@ -11,6 +11,7 @@ Welcome to my third portfolio attempt! This project showcases my progress in web
 - **Shooting Stars Animation** – Periodic visual effects to keep it dynamic.  
 - **Flying Spaceship** – A playful touch that adds movement across the screen.  
 - **Dark Mode Styling** – Clean black background with white and violet accents.  
+![image](https://github.com/user-attachments/assets/40c3c369-46df-4dc8-9c41-9d82737ed06e)
 
 ---
 
