@@ -1,4 +1,4 @@
-# 🌌 Portfolio Attempt 3
+# 🌌 Portfolio Attempt #3
 
 Welcome to my third portfolio attempt! This project showcases my progress in web development and creative front-end design. It's a personal webpage featuring a dark theme, interactive particles, and fun animations like a flying spaceship and shooting stars.
 
